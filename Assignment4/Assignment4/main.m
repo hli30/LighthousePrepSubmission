@@ -11,23 +11,12 @@
 //Finds max in an unsorted int array without sorting
 id findMax (NSMutableArray *array){
     
-    NSNumber *max;
-    NSNumber *temp;
+    NSNumber *max = array[0];
     
-    //Compare between the two numbers at array[n] and array[n+1], begin from n = 0
-    for (int i = 0, j = 1; j < [array count]; ++i, ++j) {
-        //Compare and store the larger of the two numbers in temp
-        //Store the largest number of all in max
-        if (array[i] >= array [j]){
-            temp = array[i];
-            if(temp > max){
-                max = temp;
-            }
-        }else{
-            temp = array[j];
-            if(temp > max){
-                max = temp;
-            }
+    //Overwrite max everytime the loop finds a larger interger
+    for (int i = 1; i < [array count]; ++i){
+        if(array[i] >= max){
+            max = array[i];
         }
     }
     return max;
