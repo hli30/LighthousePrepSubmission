@@ -9,10 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Car : NSObject
-{
-    //make _model accessible to subclass Toyota
-    NSString* _model;
-}
 
 @property NSString *model;
 
