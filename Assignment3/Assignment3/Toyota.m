@@ -8,15 +8,13 @@
 
 #import "Toyota.h"
 
-
 @implementation Toyota
 
 //init override
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        _model= @"Prius";
+    if(self){
+        self.model = @"Prius";
     }
     return self;
 }
